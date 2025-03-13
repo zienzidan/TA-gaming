@@ -1,4 +1,5 @@
 1. Code FIX merupakan code yang bisa menampilakn seluruh informasi yang diminta dan menambahkan value speed 
+
 2. lakukan penambahan pada generic.YAML sebagai berikut:
 type: "conditional"
 data_type: "drone:flight:event"
@@ -23,3 +24,8 @@ attribute_mappings:
   - name: "timestamp"
     description: "Creation Time"
 place_holder_event: false
+
+4. Code FIXX merupakan kode untuk menunjukkan timeline hingga microsecond
+jika ingin mengganti ke line 164 
+timestamp = dfdatetime_posix_time.PosixTimeInMicroseconds(timestamp=update_time * 1000.0) ini untuk micro second
+timestamp = dfdatetime_posix_time.PosixTime(timestamp=update_time / 1000.0) ini sesuai kodenya
