@@ -1,0 +1,25 @@
+1. Code FIX merupakan code yang bisa menampilakn seluruh informasi yang diminta dan menambahkan value speed 
+2. lakukan penambahan pada generic.YAML sebagai berikut:
+type: "conditional"
+data_type: "drone:flight:event"
+message:
+  - "Longitude: {longitude}"
+  - "Latitude: {latitude}"
+  - "Height: {height}m"
+  - "Distance: {distance}m"
+  - "Speed: {speed}m/s"
+short_message:
+  - "Flight at {timestamp}"
+  - "Longitude: {longitude}"
+  - "Latitude: {latitude}"
+  - "Distance: {distance}m"
+  - "Speed: {speed}m/s"
+short_source: "DJI"
+source: "DJI Flight Log"
+
+3. tambahkan di timeliner.YAML
+data_type: "drone:flight:event"
+attribute_mappings:
+  - name: "timestamp"
+    description: "Creation Time"
+place_holder_event: false
