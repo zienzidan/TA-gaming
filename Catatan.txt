@@ -29,3 +29,5 @@ place_holder_event: false
 jika ingin mengganti ke line 164 
 timestamp = dfdatetime_posix_time.PosixTimeInMicroseconds(timestamp=update_time * 1000.0) ini untuk micro second
 timestamp = dfdatetime_posix_time.PosixTime(timestamp=update_time / 1000.0) ini sesuai kodenya
+
+5. drone_binary.py merupakan kode yang menggunakan PosixTimeInMillisecond sesuai dengan perhitungan yang ada dijurnal
